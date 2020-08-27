@@ -1,3 +1,5 @@
+import keyword
+
 # 변수 이름은 문자, 숫자, _로 구성된다.
 friend = 1
 a = 1
