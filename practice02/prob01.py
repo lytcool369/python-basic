@@ -4,7 +4,16 @@
 s = '/usr/local/bin/python'
 
 s_splt = s.split('/')
-print(s_splt[1:])
+for result in s_splt[1:]:
+    if result != s_splt[-1]:
+        print("'{}'".format(result), end=', ')
+    else:
+        print("'{}'".format(result))
+print('')
 
 s_splt = s.rsplit('/', 1)
-prt = print(s_splt)
+for result in s_splt:
+    if result != s_splt[-1]:
+        print("'{}'".format(result), end=', ')
+    else:
+        print("'{}'".format(result))
