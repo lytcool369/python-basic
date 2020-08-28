@@ -69,10 +69,21 @@ print('====== 포맷팅 =======')
 # tuple
 print("name: %s, age: %d" % ('둘리', 10))
 
+# dict
+print("name: %(name)s, age: %(age)d" % {'name': '둘리', 'age': 10})
+
 # format() 함수
 name = '마이콜'
 age = 30
 print("name: " + format(name, 's') + ",age: " + format(age, 'd'))
+
+# format() 객체함수
+print('======== format() 객체함수 =======')
+print('name: {}, age: {}'.format(name, age))
+print('name: {0}, age: {1}'.format(name, age))
+print('name: {1}, age: {0}'.format(name, age))
+print('name: {n}, age: {a}'.format_map({'n': name, 'a': age}))
+
 
 print('======== 객체함수 =======')
 s8 = 'i like Python'
@@ -88,6 +99,81 @@ print(s9.find('Like'))
 print(s9.find('Like', 5))
 print(s9.find('JavaScript'))
 print(s9.rfind('Like'))
+
+# index()는 발견하지 못하면 예외가 발생한다.
+try:
+    s9.index('javaScript')
+except ValueError as ex:
+    print('index()는 발견하지 못하면 예외가 발생한다.')
+    pass
+    # 예외
+    # 1. 로그를 남긴다.
+    # 2. 사용자에게 에러 메시지 출력
+    # 3. 정상 종료
+
+# 편집과 치환
+s10 = '   spem and ham   '
+print('s10 : -------' + s10.strip() + '-------')
+print('s10 : -------' + s10.rstrip() + '-------')
+print('s10 : -------' + s10.lstrip() + '-------')
+
+s11 = '<><abc><><defg><>'
+print('s11 : -------' + s11.strip('<>') + '-------')
+
+s12 = 'Hello Java Java Java'
+print('s12 : -------' + s12.replace(' Java', '') + '-------')
+
+# 정렬
+s13 = 'King and Queen'
+print('s13 : -------' + s13.center(30) + '-------')
+print('s13 : -------' + s13.ljust(30) + '-------')
+print('s13 : -------' + s13.rjust(30) + '-------')
+
+# 분리
+s14 = 'spam and ham'
+r = s14.split(' and ')
+print(r, type(r))
+
+s15 = 'one:two:three:four'
+r = s15.split(':')
+print('s15 :', r)
+
+r = s15.split(':', 2)
+print('s15 :', r)
+
+r = s15.rsplit(':', 2)
+print('s15 :', r)
+
+lines = '''
+1st line
+2st line
+3st line
+4st line
+'''
+r = lines.split('\n')
+print(r)
+
+r = lines.splitlines()
+print(r)
+
+# 결합
+s16 = '&'.join(r)
+print('s16 : ', s16)
+
+# 판별
+print("'1234'.isdigit() : ", '1234'.isdigit())
+print('abcd'.isdigit())
+print('abcd'.isalpha())
+print('1234'.isalpha())
+print('abcd'.islower())
+print('abcd'.isupper())
+print(' '.isspace())
+print(''.isspace())
+print('\n'.isspace())
+print('\t'.isspace())
+
+
+
 
 # str 객체는 변경할 수 없다(불변성, Immutable)
 # s10 = 'hello'
