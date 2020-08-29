@@ -24,7 +24,10 @@ results = [len(s) for s in strings]
 print(results)
 
 # 1~100 사이의 수 중에 3, 6, 9일 경우,
-results = [n for n in range(1, 101) if n % 10 == 3 or n % 10 == 6 or n % 10 == 9]
+results = [number for number in range(1, 101)
+           if str(number).count('3') > 0 or
+           str(number).count('6') > 0 or
+           str(number).count('9') > 0]
 print(results)
 print('')
 
