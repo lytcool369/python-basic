@@ -46,7 +46,6 @@ print('')
 # 얕은복사와 깊은복사는 차이가 없다.
 a = ['hello', 'world']
 b = copy.copy(a)
-
 print(a)
 print(b)
 print(a is b)
@@ -56,7 +55,6 @@ print('')
 
 a = ['hello', 'world']
 b = copy.deepcopy(a)
-
 print(a)
 print(b)
 print(a is b)
