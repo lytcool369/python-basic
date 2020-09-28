@@ -8,6 +8,10 @@ print(a < 10)
 b = a > 1
 print(b, type(b))
 
+print(b, "isinstance bool ? ", isinstance(b, bool))     # b는 bool 객체의 인스턴스인가?
+print(b, "isinstance int ? ", isinstance(b, int))       # b는 int의 인스턴스인가?
+print("bool의 부모: ", bool.__bases__)
+
 # 연산식에서 int 값(False -> 0, True -> 1)으로 평가된다.
 print(b + 1)
 print(True * False)

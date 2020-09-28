@@ -187,3 +187,15 @@ l1[0] = 'HELLO'
 print(l1)
 l1.append('Python')
 print(l1)
+
+
+
+def docstr():
+    """
+    파이썬은 모듈의 상단, 클래스, 함수의 선언부 바로 아래
+    간단한 설명을 적으면 doctsrting 이 된다"""
+
+# docstring 의 확인: 객체.__doc__
+print(docstr().__doc__)
+# docstring 은 help 함수로도 확인
+help(docstr)
